@@ -35,13 +35,13 @@ if (GetSetting('cron_archive')) {
 echo "Done\n";
 
 /**
-* Automatically update from the git master (if configured)
+* Automatically update from the git release branch (if configured)
 * 
 */
 function GitUpdate() {
   if (GetSetting('gitUpdate')) {
     echo "Updating from GitHub...\n";
-    echo shell_exec('git pull origin master');
+    echo shell_exec('git pull origin release');
   }
 }
 
